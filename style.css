@@ -1,0 +1,1219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+/*Animação*/
+.hidden{
+    opacity: 0;
+    filter: blur(15px);
+    transition: all 0.3s;
+    transform: translateY(0%);
+}
+
+.animacao{
+    opacity: 1;
+    filter: blur(0px);
+    transition: all 0.5s;
+    transform: translateY(-10%);
+}
+
+
+body {
+    background: #000;
+}
+
+/*PRIMEIRA SEÇÃO*/
+.sec1 {
+    width: 100%;
+    height: 90vh;
+    background: linear-gradient(to left, #1d8114f6, rgba(21, 59, 16, 0.965), #1a1a18f6, #0e0e0e, #000000);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    border-bottom: solid 3px #fff;
+}
+
+.cabecalho {
+    width: 70%;
+    height: 70px;
+    margin-top: 10px;
+    border-bottom: 1px solid #11a304f6;
+}
+
+.menu {
+    width: 120%;
+    height: 80px;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    z-index: 10;
+    background: #00000062;
+}
+
+.logo {
+    font-size: 45px;
+    font-family: "Orbitron", sans-serif;
+    color: #fff;
+    height: 10px;
+}
+
+.logo a {
+    color: #fff;
+}
+
+.logo::first-letter {
+    color: #11a304f6;
+}
+
+.cabecalho ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 15px;
+    margin: 5px;
+}
+
+.cabecalho ul li {
+    margin: 10px 20px;
+    color: #11a304f6;
+}
+
+.cabecalho ul li a:hover {
+    color: #fff;
+    text-shadow: 0px 0px 10px #fff;
+    background: #1a6813;
+    padding: 14px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #11a3046e;
+}
+
+.cabecalho ul li a {
+    color: #fff;
+    transition: 0.2s ease-in-out;
+}
+
+.p1 {
+    position: relative;
+    z-index: 3;
+    width: 100px;
+}
+
+.ingressos {
+    position: relative;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 30px;
+    background: #11111159;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    overflow: hidden;
+    border: none;
+    z-index: 1;
+}
+
+.ingressos:hover::after {
+    background: #fff;
+    transition: 0.8s;
+}
+
+.ingressos::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: -40px;
+    width: 200px;
+    height: 10px;
+    background: #11a304f6;
+    animation: animacao 3s linear infinite;
+    z-index: -1;
+}
+
+.ingressos::after {
+    content: "";
+    position: absolute;
+    background: #111111;
+    inset: 3px;
+    border-radius: inherit;
+    z-index: -1;
+
+}
+
+.nome-ingresso {
+    color: #fff;
+    z-index: 1;
+    font-weight: 700;
+}
+
+.ingressos:hover .nome-ingresso {
+    color: #000;
+}
+
+@keyframes animacao {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*GRIDS*/
+.conteudo {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.txtprincipal,
+.img-1 {
+    width: 50%;
+    height: 65vh;
+    margin: auto;
+    margin-top: 70px;
+}
+
+.txtprincipal {
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.txtprincipal h3 {
+    display: inline-block;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 37%;
+    margin-top: 100px;
+    margin-bottom: -1px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #11a304f6;
+    border-right: 6px solid #11a304f6;
+    white-space: nowrap;
+    animation: tecla 0.5s step-end infinite, tecla2 9s steps(29, end) infinite;
+}
+
+@keyframes tecla {
+    50% {
+        border-right-color: transparent;
+    }
+}
+
+@keyframes tecla2 {
+    20% {
+        width: 0px;
+    }
+
+    70% {
+        width: 0px;
+    }
+
+    85% {
+        width: 275px;
+    }
+
+    97% {
+        width: 275px;
+    }
+}
+
+.txtprincipal h1 {
+    font-size: 80px;
+    font-family: "Unica One", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.h1-02 {
+    margin-top: -20px;
+    font-weight: 1000;
+}
+
+.letra-final {
+    color: #11a304f6;
+}
+
+.txtprincipal h1:nth-child(3)::first-letter {
+    color: #fff;
+}
+
+.txtprincipal p {
+    color: #fff;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    width: 90%;
+}
+
+.txtprincipal h1::first-letter {
+    color: #11a304f6;
+}
+
+.e {
+    color: #fff;
+}
+
+.img-1 {
+    margin: 100px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-1 img {
+    width: 80%;
+    height: auto;
+    max-width: 800px;
+}
+
+.botao1 {
+    margin-top: 20px;
+    width: 25%;
+    text-align: center;
+    padding: 18px 10px;
+    border-radius: 20px;
+    background: #11a304f6;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.botao1:hover {
+    background: #292929;
+    color: #11a304f6;
+    box-shadow: 0 0 10px #11a304f6;
+}
+
+.botao1 a {
+    text-decoration: none;
+    color: #111111;
+    transition: 0.5s;
+
+}
+
+.botao1 a:hover {
+    color: #11a304f6;
+
+}
+
+/*SEÇÃO 2*/
+.sec2 {
+    width: 100%;
+    height: auto;
+    background: rgb(101, 143, 101);
+}
+
+#sobre h1 {
+    display: flex;
+    font-size: 110px;
+    margin: 0px 0 30px 0;
+    background: linear-gradient(to right, #072902, rgba(17, 228, 52, 0.965), rgba(17, 228, 52, 0.965), #072902);
+    background-clip: text;
+    opacity: 0.6;
+    color: transparent;
+    font-family: "Orbitron", sans-serif;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    margin-top: 52px;
+}
+
+.eco {
+    color: #fff;
+    position: relative;
+    margin-top: -89px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 30px;
+    font-family: "Orbitron", sans-serif;
+    letter-spacing: 3px;
+    text-shadow: 0px 0px 10px #002902;
+}
+
+#sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 30px;
+    background: #aeb4a9;
+    border-radius: 25px;
+    box-shadow: 0 0 20px #000;
+    flex-direction: row;
+}
+
+.imgZoo {
+    display: flex;
+    margin-right: 50px;
+}
+
+.imgZoo img {
+    width: 105%;
+    margin-top: 100px;
+}
+
+.meio-circulo {
+    display: flex;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px 0 0 50px;
+    background: rgb(124, 148, 109);
+}
+
+.txtZoo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    background: rgb(124, 148, 109);
+    height: 100%;
+    border-radius: 0 25px 25px 0;
+    padding: 20px;
+    line-height: 32px;
+    text-align: justify;
+}
+
+.txtZoo h3 {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.txtZoo p {
+    font-size: 20px;
+    font-family: "Outfit", sans-serif;
+    padding: 15px;
+}
+
+.imgs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.imagem {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+}
+
+.imagem img {
+    width: 310px;
+    height: auto;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.imagem2 img {
+    width: 310px;
+}
+
+.imagem img:hover {
+    transform: scale(1.3);
+    box-shadow: 0 0 10px #2ad400;
+}
+
+.imagem5 img {
+    width: 310px;
+}
+
+/*SEÇÃO 3*/
+.sec3 {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(rgb(101, 143, 101), #000);
+    overflow-x: hidden;
+
+}
+
+.content2,
+.content3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.animais,
+.loc {
+    display: flex;
+    font-size: 110px;
+    margin: 0px 0 30px 0;
+    background: linear-gradient(to right, #072902, rgba(17, 228, 52, 0.965), rgba(17, 228, 52, 0.965), #072902);
+    background-clip: text;
+    opacity: 0.8;
+    color: transparent;
+    font-family: "Orbitron", sans-serif;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    margin-top: 57px;
+}
+
+/*RÉPTEIS*/
+.repteis,
+.aves,
+.mamiferos,
+.aquaticos {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    margin: 50px;
+}
+
+.repteis ul li {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 700;
+    margin-left: 50px;
+}
+
+.imgs-rap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/*CROCODILO*/
+.croc {
+    width: 300px;
+    height: 300px;
+    background-image: url(./img/crocodilo.png);
+    background-position: -230px;
+    margin-top: 15px;
+    overflow: hidden;
+    transition: 0.5s;
+    border-radius: 10px;
+    position: relative;
+    margin: 30px;
+}
+
+.croc img {
+    position: relative;
+    left: -240px;
+}
+
+.croc:hover {
+    transform: scale(1.3);
+}
+
+.croc:hover::before {
+    content: "";
+    position: absolute;
+    width: 326px;
+    height: 453px;
+    background: rgba(0, 0, 0, 0.39);
+    z-index: 3;
+}
+
+.croc h3 {
+    color: #fff;
+    position: relative;
+}
+
+.info {
+    display: flex;
+    position: relative;
+    width: 330px;
+    height: 460px;
+    justify-content: center;
+    overflow: hidden;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.info:hover {
+    background: #00000059;
+    transition: 0.5s ease;
+}
+
+
+.info h2 {
+    font-size: 18px;
+    font-family: "Orbitron", sans-serif;
+    text-transform: uppercase;
+    opacity: 0;
+    text-align: center;
+    margin-right: 30px;
+    margin-top: -210px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.info:hover h2 {
+    opacity: 1;
+    padding-bottom: 50px;
+    border-bottom: solid 2px #fff;
+    height: 45px;
+}
+
+.info p {
+    color: #fff;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    margin: 10px 20px 10px 23px;
+    opacity: 0;
+}
+
+.info:hover p {
+    opacity: 1;
+}
+
+/*SUCURI*/
+.suc {
+    background-image: url(./img/sucuri.jpg);
+    background-size: 400px;
+    background-position: -80px;
+}
+
+.info2 h2 {
+    margin-top: -150px;
+    font-size: 18px;
+    font-family: "Orbitron", sans-serif;
+    text-transform: uppercase;
+    opacity: 0;
+    text-align: center;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/*DRAGÃO DE KOMODO*/
+.kom {
+    background-image: url(./img/dragao-komodo.jpg);
+    background-size: 460px;
+    background-position: -80px;
+}
+
+.info3 p {
+    margin: 10px 0px 10px 14px;
+}
+
+/*CAMALEÃO*/
+.camale {
+    background-image: url(./img/camaleão.jpg);
+    background-size: 460px;
+    background-position: -80px;
+}
+
+/*JACARÉ*/
+.jacar {
+    background-image: url(./img/jacare.jpg);
+    background-size: 500px;
+    background-position: -80px;
+    background-position-y: -20px;
+}
+
+/*SEÇÃO 4*/
+.sec4 {
+    width: 100%;
+    height: auto;
+    background: #000;
+}
+
+.aves ul li {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 700;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.mamiferos ul li {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 700;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.aquaticos ul li {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 700;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+/*ARARA*/
+.arara {
+    background-image: url(./img/arara.jpg);
+    background-size: 300px;
+    background-position: -1px;
+    background-position-y: -20px;
+}
+
+/*PAVÃO*/
+.pavao {
+    background-image: url(./img/Pavao.jpg);
+    background-size: 435px;
+    background-position: -50px;
+    background-position-y: -20px;
+}
+
+/*FLAMINGO*/
+.flamin {
+    background-image: url(./img/flamingo.jpg);
+    background-size: 435px;
+    background-position: -137px;
+    background-position-y: -20px;
+}
+
+/*FALCÃO*/
+.falc {
+    background-image: url(./img/falcao.jpg);
+    background-size: 513px;
+    background-position: -60px;
+    background-position-y: -20px;
+}
+
+/*CORUJA*/
+.coru {
+    background-image: url(./img/coruja.jpg);
+    background-size: 513px;
+    background-position: -60px;
+    background-position-y: -20px;
+}
+
+/*PINGUIM*/
+.ping {
+    background-image: url(./img/pinguim.jpg);
+    background-size: 430px;
+    background-position: -50px;
+    background-position-y: -20px;
+}
+
+/*MAMIFERO*/
+/*LEÃO*/
+.leao {
+    background-image: url(./img/Leao.jpg);
+    background-size: 490px;
+    background-position: -100px;
+    background-position-y: -10px;
+}
+
+/*ELEFANTE*/
+.elef {
+    background-image: url(./img/elefante.jpg);
+    background-size: 470px;
+    background-position: -40px;
+    background-position-y: -10px;
+}
+
+/*GIRAFA*/
+.giraf {
+    background-image: url(./img/girafa.jpg);
+    background-size: 550px;
+    background-position: -150px;
+    background-position-y: -10px;
+}
+
+/*GORILA*/
+.gori {
+    background-image: url(./img/gorila.jpg);
+    background-size: 550px;
+    background-position: -150px;
+    background-position-y: -10px;
+}
+
+/*HIPOPOTAMO*/
+.hipo {
+    background-image: url(./img/hipopotamo.jpg);
+    background-size: 550px;
+    background-position: -120px;
+    background-position-y: -10px;
+}
+
+/*RINOCERONTE*/
+.rino {
+    background-image: url(./img/rinoceronte.jpg);
+    background-size: 440px;
+    background-position: -90px;
+    background-position-y: -80px;
+}
+
+/*SEÇÃO 5*/
+.sec5 {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(#000, #174170);
+}
+
+/*AQUATICOS*/
+/*GOLFINHO*/
+.golf {
+    background-image: url(./img/golfinho.jpg);
+    background-size: 490px;
+    background-position: -70px;
+    background-position-y: -1px;
+}
+
+/*TUBARÃO*/
+.tub {
+    background-image: url(./img/tubarao.jpg);
+    background-size: 580px;
+    background-position: -200px;
+    background-position-y: -10px;
+}
+
+/*LULAS*/
+.lulas {
+    background-image: url(./img/lulas.jpg);
+    background-size: 500px;
+    background-position: -100px;
+    background-position-y: -10px;
+}
+
+/*TARTARUGA*/
+.tart {
+    background-image: url(./img/tartaruga.jpg);
+    background-size: 500px;
+    background-position: -100px;
+    background-position-y: -10px;
+}
+
+/*FOCA*/
+.foca {
+    background-image: url(./img/focas.jpg);
+    background-size: 550px;
+    background-position: -100px;
+    background-position-y: -10px;
+}
+
+/*SEÇÃO 6*/
+.sec6 {
+    margin-top: -50px;
+    width: 100%;
+    height: auto;
+    background: #b8b8b8;
+    overflow-x: hidden;
+}
+
+.content4 {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-wrap: wrap;
+}
+
+.estaci {
+    width: 45%;
+    margin-left: 70px;
+    margin: 0 60px;
+}
+
+.estaci h2 {
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    margin-top: 50px;
+}
+
+.negrito {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.estaci ul li {
+    font-size: 14px;
+    margin: 17px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.end {
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Valor Estacionamento*/
+.valor-estacio {
+    width: 500px;
+    height: 400px;
+    background: rgb(252, 252, 252);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 55px auto;
+    margin-bottom: 100px;
+}
+
+.valor-estacio h3 {
+    font-size: 25px;
+    width: 65%;
+    font-weight: 1000;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.valor-estacio h6 {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+.hora {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+.valor-estacio p {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    text-align: center;
+    margin: 13px;
+}
+
+/*valor veiculo*/
+.real {
+    display: flex;
+}
+
+.real p {
+    margin: 10px auto;
+}
+
+hr {
+    width: 450px;
+    height: 3px;
+    background: #3f3f3f;
+}
+
+/*SETIMA SEÇÃO*/
+.sec7 {
+    margin-top: -50px;
+    width: 100%;
+    height: auto;
+    background: rgb(101, 143, 101);
+}
+
+/*CONTATO*/
+.contato {
+    display: flex;
+    font-size: 70px;
+    margin: 0px 0 30px 0;
+    background: linear-gradient(to right, #072902, rgba(17, 228, 52, 0.965), rgba(17, 228, 52, 0.965), #072902);
+    background-clip: text;
+    opacity: 0.8;
+    color: transparent;
+    font-family: "Orbitron", sans-serif;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    margin-top: 62px;
+}
+
+.cont {
+    color: #ffffff;
+    position: relative;
+    margin-top: -67px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: "Orbitron", sans-serif;
+    letter-spacing: 3px;
+    text-shadow: 0px 0px 10px #050505;
+}
+
+.content5 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 60px 0 60px;
+    margin-top: 50px;
+}
+
+.textos-contato {
+    display: flex;
+    flex-direction: column;
+}
+
+.horario h3 {
+    font-size: 23px;
+    text-transform: uppercase;
+    margin-left: 20px;
+    font-family: "New Amsterdam", sans-serif;
+    letter-spacing: 3px;
+}
+
+.horario p {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 9px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+.telefone h3 {
+    font-size: 19px;
+    font-family: "New Amsterdam", sans-serif;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-left: 20px;
+}
+
+.telefone p {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 9px;
+    margin-left: 20px;
+}
+
+.whatsapp h3 {
+    font-size: 19px;
+    font-family: "New Amsterdam", sans-serif;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-left: 20px;
+    margin-top: 25px;
+}
+
+.whatsapp p {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 9px;
+    margin-left: 20px;
+}
+
+.email h3 {
+    font-size: 19px;
+    font-family: "New Amsterdam", sans-serif;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-left: 20px;
+    margin-top: 25px;
+}
+
+.email p {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 9px;
+    margin-left: 20px;
+}
+
+/*FORMULÁRIO*/
+.formulario {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: auto;
+    flex-direction: column;
+    margin-top: 6px;
+    margin-bottom: 50px;
+    background: #455e3f;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.formulario h3 {
+    font-size: 50px;
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    justify-content: center;
+    margin-bottom: 40px;
+    margin-top: -5px;
+    text-align: center;
+    color: #d3c71d;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.txtnome {
+    font-size: 20px;
+    font-family: "Orbitron", sans-serif;
+    margin-bottom: 3px;
+    margin-top: 10px;
+}
+
+.nometxt {
+    width: 50%;
+    height: 30px;
+    padding: 20px;
+}
+.emaill{
+    width: 80%;
+    height: 30px;
+    padding: 20px;
+}
+
+.txarea {
+    font-size: 20px;
+    font-family: "Orbitron", sans-serif;
+    margin-bottom: 3px;
+    margin-top: 20px;
+}
+
+#txtarea {
+    padding: 10px;
+}
+
+#enviar {
+    margin-top: 10px;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background: #050505;
+    color: #fff;
+    font-size: 17px;
+    transition: 0.5s;
+}
+
+#enviar:hover {
+    background: #fff;
+    color: #000;
+    box-shadow: 0 0 10px #0ba113;
+}
+
+
+/*FOOTER*/
+.pg-final {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background: rgb(9, 14, 8);
+
+}
+
+.pg-final p {
+    color: #fff;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+/*FAZ A INFOMAÇÃO DO ZOOLÓGICO FICAR EM FORMA DE COLUNAS, ASSIM GARANTE A VISUALIZAÇÃO DA IMAGEM E DO TEXTO*/
+@media (max-width: 999px) {
+    .sec1{
+        background: linear-gradient(to top, #1d8114f6, rgba(21, 59, 16, 0.965), #1a1a18f6, #0e0e0e, #000000);
+        height: 1500px;
+    }
+    .txtprincipal h1{
+        font-size: 120px;
+    }
+    .txtprincipal p {
+        font-size: 25px;
+        margin: 0 auto;
+        text-align: justify;
+    }
+
+    .conteudo {
+        flex-direction: column;
+        justify-content: center;
+    }
+        .img-1{
+            width: 100%;
+            margin-bottom: 180px;
+        }
+
+    .dev {
+        margin: 0 auto;
+    }
+
+    .botao1 {
+        margin: 20px auto;
+    }
+
+    .txtprincipal {
+        margin-top: -200px;
+        margin-right: 120px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .sobre {
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+    .meio-circulo {
+        rotate: 90deg;
+        width: 80px;
+        margin-bottom: -20px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .txtZoo {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .estaci {
+        width: 100%;
+    }
+
+    .textos-contato {
+        margin: auto;
+    }
+
+    .formulario {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1920px) {
+    .txtZoo {
+        height: auto;
+        width: 100%;
+    }
+}

@@ -1,2 +1,1 @@
-A faculdade nos passou um trabalho que consiste em desenvolver um site para um zoológico. O objetivo é criar uma plataforma onde os visitantes possam conhecer os animais, as atrações e os serviços oferecidos.Apliquei diversos conceitos aprendidos em sala, como HTML, CSS e JavaScript, para criar um site interativo e informativo, destacando as características de cada espécie e facilitando a navegação para o público.
-Clique aqui para visualizar: 
+
